@@ -32,9 +32,11 @@ CREATE TABLE `comments` (
 	  `id_article` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+/*
 ALTER TABLE `comments`
-  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_comment`) REFERENCES `users` (`id_user`) ON DELETE CASCADE,
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE,
   ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `articles` (`id_article`) ON DELETE CASCADE;
+*/
   
 ALTER TABLE comments
 ADD FOREIGN KEY user_fk(id_user)
